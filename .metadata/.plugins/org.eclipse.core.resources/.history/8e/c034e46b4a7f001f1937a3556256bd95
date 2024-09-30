@@ -1,0 +1,10 @@
+/*
+ * SOFTWARE_TIME.C
+ *
+ *  Created on: Sep 30, 2024
+ *      Author: DELL
+ */
+
+#include "SOFTWARE_TIMER.h"
+int timer1_counter = 0;
+int
