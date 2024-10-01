@@ -309,7 +309,7 @@ int led_buffer [4] = {5 , 4 , 0 , 6};
 					        }
 	}
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-		static int timer_counter = 500;  // Biến đếm thời gian*/
+		static int timer_counter = 0;  // Biến đếm thời gian*/
 
 
 		      if (timer1_flag == 1){
