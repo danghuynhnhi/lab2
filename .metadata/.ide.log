@@ -1781,3 +1781,7 @@
 2024-10-02 01:41:57,480 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2024-10-02 01:41:57,481 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2024-10-02 04:55:53,416 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-10-02 16:53:38,500 [INFO] Activator:177 - 
+
+
+2024-10-02 16:53:38,502 [INFO] Activator:178 - !SESSION log4j initialized
