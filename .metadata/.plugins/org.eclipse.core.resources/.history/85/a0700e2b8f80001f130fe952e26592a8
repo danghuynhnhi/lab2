@@ -100,7 +100,7 @@ int main(void)
 
 
 
-setTimer1(25);
+setTimer1(100);
 int hour = 15 , minute = 8 , second = 50;
 
 while (1) {
@@ -116,10 +116,10 @@ while (1) {
  if( hour >=24) {
  hour = 0;
 }
- updateClockBuffer (hour , minute) ;
+ updateClockBuffer () ;
  HAL_Delay (1000) ;
-
 }
+// setTimer1(100);
 	    }    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -299,8 +299,8 @@ void updateClockBuffer(int hour, int minute) {
 					        switch (index) {
 					            case 0:
 					                // Hiển thị số 1 trên LED thứ nhất
-					                HAL_GPIO_WritePin(GPIOA, EN1_Pin | EN2_Pin | EN3_Pin, SET);
 					                HAL_GPIO_WritePin(GPIOA, EN0_Pin, RESET);
+					                HAL_GPIO_WritePin(GPIOA, EN1_Pin | EN2_Pin | EN3_Pin, SET);
 					                display7SEG(led_buffer[0]);
 					                break;
 
@@ -347,7 +347,6 @@ void updateClockBuffer(int hour, int minute) {
 				    	  }
 
 
-				    	  setTimer1(25);
 
 //			        setTimer1(25);
 		 }
