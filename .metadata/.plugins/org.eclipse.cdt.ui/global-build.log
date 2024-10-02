@@ -1,16 +1,16 @@
-15:25:52 **** Incremental Build of configuration Debug for project LAB2 ****
+16:49:50 **** Incremental Build of configuration Debug for project LAB2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F100xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:2: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
-  123 |  updateClockBuffer (hour , minute) ;
+../Core/Src/main.c:121:2: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  121 |  updateClockBuffer (hour , minute) ;
       |  ^~~~~~~~~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:258:6: warning: conflicting types for 'updateClockBuffer'
-  258 | void updateClockBuffer(int hour, int minute) {
+../Core/Src/main.c:262:6: warning: conflicting types for 'updateClockBuffer'
+  262 | void updateClockBuffer(int hour, int minute) {
       |      ^~~~~~~~~~~~~~~~~
-../Core/Src/main.c:123:2: note: previous implicit declaration of 'updateClockBuffer' was here
-  123 |  updateClockBuffer (hour , minute) ;
+../Core/Src/main.c:121:2: note: previous implicit declaration of 'updateClockBuffer' was here
+  121 |  updateClockBuffer (hour , minute) ;
       |  ^~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\downloads\STM32CubeIDE_1.7.0\lab2\LAB2\STM32F100C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LAB2.elf
@@ -19,7 +19,7 @@ arm-none-eabi-size   LAB2.elf
 arm-none-eabi-objdump -h -S  LAB2.elf  > "LAB2.list"
 arm-none-eabi-objcopy  -O ihex  LAB2.elf  "LAB2.hex"
    text	   data	    bss	    dec	    hex	filename
-   8192	     24	   1696	   9912	   26b8	LAB2.elf
+   8100	     24	   1696	   9820	   265c	LAB2.elf
 arm-none-eabi-objcopy  -O binary  LAB2.elf  "LAB2.bin"
 Finished building: default.size.stdout
  
